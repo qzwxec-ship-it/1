@@ -1,0 +1,56 @@
+<style>
+	body{
+		background-color: black;
+		text-align: center;
+	}
+	h1{
+		color: aliceblue;
+		text-shadow: 0 0 20px blue;;
+	}
+	h2{
+		color:blue;
+		text-shadow: 0 0 20px red;;
+	}
+	.fake-alert{
+		background-color: black;
+		color: red;
+		position: fixed;
+		left:%50;
+		top:%50;
+		border:2px solid red;
+		box.shadow:0 0 25px red;
+		padding:10px 20px;
+		font-weight:bold;
+		border-radius:5px;
+		transform:scale(0.1)
+		opacity: 0;
+		transition: all 0.5s;
+	}
+</style>
+<h1>Pvz9x版<h1>
+<h2>更多拓展内容 应有尽有！！<h2>
+<a href="https://www.bilibili.com/video/BV1GJ411x7h7?t=10.2">
+	<marquee>
+<h1>点击下载<h1/>
+	<marquee>
+</a>
+
+<script>
+	var n=10;
+	for(var i=1;i<=n;i++){
+		alert("点击十次以完成人机检测")
+	}
+	for(var i=1;i<=100;i++){
+		setTimeout(() => {
+			let box=document.createElement("div");
+			box.innerText="⚠你是个人机⚠"
+			document.body.appendChild(box);
+			box.className="fake-alert";
+			box.offsetHeight;
+			box.style.left=(Math.random()*100)+"%";
+			box.style.top=(Math.random()*100)+"%";
+			box.style.opacity="1";
+			box.style.transform=`scale(${Math.random()+0.5}) rotate(${Math.random()*60-30}deg)`;
+		},i*20);
+	}
+</script>
